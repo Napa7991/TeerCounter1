@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index 2 Code</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="style2.css">
+ 
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="teerLogo.png" alt="error" class="logo" />
+        </div>
+        <div class="links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contactus">Contact us</a></li>
+          <li><a href="/LogIn.html">Admin</a></li>
+        </div>
+      </nav>
+    </header>
+
+    <!-- --------------- MAIN ----------------- -->
+    <main class="containerMain">
+      <section class="heroContainer">
+        <section class="ticket">
+          <h2>Choose Your Number</h2>
+          <div class="button-container">
+            <button class="btn" id="selectNumberBtn" onclick="selectItem(this)">
+              Single
+            </button>
+            <button class="btn" id="selectRowBtn" onclick="selectItem(this)">
+              House
+            </button>
+            <button class="btn" id="selectColumnBtn" onclick="selectItem(this)">
+              Ending
+            </button>
+          </div>
+          <div class="grid" id="grid-container"></div>
+          <div id="selectedValue"></div>
+          <button class="bookBtn">Book Now</button>
+        </section>
+        <section class="result">
+          <h2>Result Update</h2>
+          <article>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae,
+              autem facilis beatae commodi soluta expedita dolorem tempore
+              pariatur perspiciatis laudantium
+            </p>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <!-- FORM -->
+
+    <form
+      class="formContainer"
+      onsubmit="return validateForm()"
+      method="post"
+    >
+      <span class="close material-symbols-outlined"> close </span>
+      <div class="roundContainer">
+        <span class="rounds firstRound">1st Round</span>
+        <span class="rounds secondRound">2nd Round</span>
+      </div>
+      <!-- Selected House Input -->
+      <div class="selectedHouse">
+        <span class="selectedHouseSpan">House</span>
+        <span id="selectedNumberSpan"></span>
+      </div>
+
+      <!-- input Div -->
+
+      <div class="inputDiv">
+        <label>MOBILE NUMBER</label>
+        <input type="tel" class="inp numberInput" />
+        <label>NAME</label>
+        <input type="text" class="inp nameInput" />
+        <label>AMOUNT</label>
+        <input
+          type="number"
+          id="amountInput"
+          class="inp"
+          step="5"
+          oninput="validateInput()"
+        />
+      </div>
+      <!-- Enter amount -->
+      <div class="amountDiv">
+        <p>Expected wining amount is :</p>
+        <br />
+        <div id="resultDiv"></div>
+      </div>
+      <button type="submit" class="submitBtn">Submit</button>
+    </form>
+
+    <!-- -------- FOOTER --------------- -->
+    <footer>
+      <div class="copyright">
+        &copy; 2023 Your Website Name. All Rights Reserved.
+      </div>
+    </footer>
+
+    <!-- ----------- JAVASCRIPT --------------- -->
+   <script src="script2.js"></script>
+  </body>
+</html>

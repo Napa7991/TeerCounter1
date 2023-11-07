@@ -1,0 +1,352 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ------------------ HEADER ------------------- */
+  
+  /* Navbar */
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(105, 143, 163);
+    box-shadow: 5px 5px 5px #b0abab;
+    padding: 0.5rem;
+  }
+  
+  /* links */
+  .links,
+  a {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    gap: 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-left: 0.5rem;
+  }
+  
+  /* ---------------- HEADER ENDING -------------- */
+  
+  /* ------------------- MAIN ------------------ */
+  
+  /* section --- ticket ---- */
+  .ticket {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+  
+  .numbers {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  
+  .bookBtn {
+    border: none;
+    outline: none;
+    background-color: #72a5c6;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* section - ------ ticket ending ------- */
+  
+  /* section -------------- result --------------- */
+  .result {
+    height: 100px;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  article {
+    margin: 1rem 0.2rem;
+    text-align: justify;
+    border: 1px solid black;
+    padding: 0.5rem;
+  }
+  
+  /* ------ house info ----------*/
+  
+  .houseContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: red; */
+    margin: 4rem 0;
+    padding: 1rem 0;
+    border: 1px solid black;
+  }
+  
+  /*  --------------- FOOTER ---------- */
+  /* for footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .copyright {
+    font-size: 14px;
+  }
+  
+  @media screen and (min-width: 776px) {
+    /* ----- header ------ */
+  
+    .links,
+    a {
+      padding-right: 3rem;
+      font-size: 1.5rem;
+    }
+  
+    .logo {
+      width: 80px;
+      height: 70px;
+      margin-left: 4rem;
+    }
+  
+    /* -------- header ending------- */
+  
+    /* heroContainer */
+    .heroContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    article {
+      margin-top: 3rem;
+      height: 200px;
+      width: 500px;
+    }
+  
+    /* house info */
+    .houseContainer {
+      margin: 2rem 0;
+    }
+  }
+  
+  /* ------ main ------------- */
+  .containerMain {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+  }
+  
+  .button-container {
+    margin: 1rem 0;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+  }
+  
+  .number {
+    width: 25px;
+    height: 25px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    border: 1px solid black;
+  }
+  
+  .singleHover {
+    transform: scale(1.2);
+    background-color: #5c8daf;
+    transition: 0.3s;
+  }
+  
+  .rowHover {
+    transform: scale(1.2);
+    background-color: #5c8daf;
+    transition: 0.5s;
+  }
+  
+  .columnHover {
+    transform: scale(1.2);
+    background-color: #5c8daf;
+    transition: 0.3s;
+  }
+  .btn {
+    border: none;
+    outline: none;
+    background-color: #72a5c6;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .btn:hover,
+  .btn.active {
+    transform: scale(1.2);
+    background-color: #5c8daf;
+    transition: 0.5s;
+  }
+  
+  /* FORM */
+  
+  .formContainer {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    right: 0px;
+    bottom: 0px;
+  
+    background-color: white;
+    width: 300px;
+    height: 450px;
+    border-radius: 2rem;
+    border: 1px solid teal;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .roundContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .rounds {
+    border: 1.5px solid teal;
+    border-radius: 0.2rem;
+    width: 70px;
+    text-align: center;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  
+  /* for selected House */
+  .selectedHouse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .selectedHouseSpan {
+    background-color: rgb(223, 221, 221);
+    padding: 0.1rem 1rem;
+    border-radius: 0.2rem;
+  }
+  
+  .selectedNumberSpan {
+    background-color: rgb(231, 236, 236);
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.2rem;
+  }
+  
+  .inputDiv {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .inp {
+    margin-bottom: 0.5rem;
+    padding: 0.2rem;
+    outline: none;
+    border-radius: 0.3rem;
+    /* border: none; */
+    border: 0.4px solid grey;
+    width: 210px;
+  }
+  
+  label {
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
+  }
+  
+  /* Amount money */
+  
+  .amountDiv {
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    width: 210px;
+    height: 90px;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+  }
+  
+  .submitBtn {
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: rgb(141, 203, 232);
+    color: white;
+  }
+  
+  .addForm {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .blurBody {
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  @media screen and (min-width: 776px) {
+    .formContainer {
+      left: 15%;
+      top: 20%;
+    }
+  }
+  
+  .close {
+    position: absolute;
+    right: -30px;
+    font-size: 2.5rem;
+    top: -2rem;
+    cursor: pointer;
+    color: rgb(41, 88, 110);
+  }
+  .active {
+    background-color:rgb(72, 126, 151);
+    color:white;
+  }
+  
+  
+  /* mark for single house */
+  .mark{
+      background-color: red;
+  }
